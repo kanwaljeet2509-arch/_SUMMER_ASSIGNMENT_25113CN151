@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+int n1,n2,arr1[100],arr2[100],intersec[100],i,j,k=0;
+    printf("Enter the number of elements of first array:\n");
+    scanf("%d",&n1);
+    printf("Enter elements:\n");
+    for(i=0;i<n1;i++)
+    {
+    scanf("%d",&arr1[i]);
+    }
+    printf("Enter the number of elements of second array:\n");
+    scanf("%d",&n2);
+    printf("Enter elements:\n");
+    for(i=0;i<n2;i++)
+    {
+    scanf("%d",&arr2[i]);
+    }
+    for(i=0;i<n1;i++)
+    {
+    for(j=0;j<n2;j++)
+    {
+    if(arr1[i]==arr2[j])
+    {
+    intersec[k++]=arr1[i];
+    break;
+    }
+    }
+    }
+    printf("Intersection array:\n");
+    for(i=0;i<k;i++)
+    {
+    printf("%d",intersec[i]);
+    }
+    return 0;
+}
